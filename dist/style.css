@@ -1,0 +1,227 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#nav-bar{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr 1fr;
+    background-color: #f5f6fa;
+    border-bottom: 1px black solid;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    align-items: center;
+    justify-items: center;
+}
+#menu-option {
+    position: absolute;
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: none;
+  }
+  .menu-select{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px #dfe4ea solid; 
+    cursor: pointer;
+  }
+  .fas{
+      cursor: pointer;
+      font-size: 4vh;
+  }
+  #calculatur{
+      display: grid;
+      position: relative;
+      grid-template-rows: 5fr 1fr;
+      width: 100%;
+  }
+  .answer {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+    text-align: center;
+}
+.answer:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+.answer:active {
+	position:relative;
+	top:1px;
+}
+  .chat-msg{
+    border:1px solid black;
+    border-radius: 4px;
+    display: inline-block;
+    position: absolute;
+      
+  }
+    #user-msg{
+    background-color: #2ecc71;
+    right: 0;
+    
+}
+    #domain-msg{
+    background-color: #95a5a6;
+    left: 0;
+    
+}
+#answers{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-gap: 5px;
+}
+label{
+    display: inline-block;
+}
+#eror{
+    color: red;
+}
+#details{
+    background-color: #3498db;
+    border: 1px white solid;
+    box-shadow: 1px 1px 5px #7f8c8d;
+    bottom: 0;
+    width: 100%;
+    padding: 2px;
+    position: fixed;
+}
+#user-form{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+    border: 1px black solid;
+    background-color: #2d3436;
+    color: white;
+}
+#user-form>input{
+    text-align: center;
+    border: none;
+    border-bottom: 0.5px #7f8c8d solid;
+    color: white;
+    background-color: #2d3436;
+    width: 98%;
+}
+
+
+.submit-user {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.submit-user:hover {
+	background-color:#5cbf2a;
+}
+.submit-user:active {
+	position:relative;
+	top:1px;
+}
+#world-stats{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+}
+
+.stat{
+    font-size: 5vw;
+    background-color: #f7f1e3;
+    border: 3px white solid;
+    border-radius: 5px;
+    width: 100%;
+    padding: 1.5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+#global-stat{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+img{
+    width: 100%;
+    height: 30%;
+}
+  .news{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+  #news{
+      height: 12vh;
+  }
+  .links {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.links:hover {
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;
+}
+.links:active {
+	position:relative;
+	top:1px;
+}
+
+  .us{
+      width: 90%;
+      margin-left: 4%;
+  }
+  @media screen and (min-width: 800px) {
+    #page-content{
+        width: 800px;
+        margin-left: 20%;
+    }
+    #menu-option {
+        width: 30%;
+        position: absolute;
+        right: 0;
+    }
+    #user-form{
+        width: 55%;
+    }
+  }
